@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Undangan Pernikahan Nur Azizah & M. Said</title>
     
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Undangan Pernikahan Nur Azizah & M. Said">
+    <meta property="og:description" content="Kamis - Jum'at, 4 - 5 Juni 2026. Kp. Bolangsari, Karawang.">
+    <meta property="og:image" content="https://i.pinimg.com/originals/ee/38/77/ee387764a9731c0099a122895af3def8.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
@@ -20,7 +27,7 @@
             position: fixed; top: 0; left: 50%; transform: translateX(-50%);
             width: 100%; max-width: 480px; height: 100vh; z-index: 9999;
             display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/originals/ee/38/77/ee387764a9731c0099a122895af3def8.jpg');
             background-size: cover; background-position: center;
             transition: transform 1.2s cubic-bezier(0.7, 0, 0.3, 1);
         }
@@ -41,7 +48,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* Animasi Berputar untuk Indikator Musik */
         .rotating { animation: rotation 3s infinite linear; }
         @keyframes rotation { from { transform: rotate(0deg); } to { transform: rotate(359deg); } }
 
@@ -60,7 +66,7 @@
         /* --- 5. HERO SECTION --- */
         .hero {
             height: 100vh; width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.pinimg.com/originals/ee/38/77/ee387764a9731c0099a122895af3def8.jpg');
             background-size: cover; background-position: center;
         }
         .name-stack h1 { font-size: 2rem; font-weight: 800; letter-spacing: -1px; }
@@ -175,7 +181,7 @@
                         Kp. Bolangsari RT/RW 14/04<br>
                         Ds. Mulangsari, Pangkalan, Karawang
                     </p>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Ds.+Mulangsari,+Pangkalan,+Karawang" target="_blank" class="btn-action">BUKA GOOGLE MAPS</a>
+                    <a href="https://maps.google.com/?q=Bolangsari+Mulangsari+Karawang" target="_blank" class="btn-action">BUKA GOOGLE MAPS</a>
                 </div>
             </section>
 
@@ -216,11 +222,9 @@
             const cover = document.getElementById('cover-page');
             const main = document.getElementById('main-invitation');
             
-            // Putar Musik & Tampilkan Indikator Berputar
             music.play().then(() => {
                 musicBtn.style.display = 'flex';
             }).catch(e => {
-                // Force play jika autoplay diblokir (saat sentuhan pertama)
                 document.body.addEventListener('click', () => {
                     music.play();
                     musicBtn.style.display = 'flex';
@@ -241,11 +245,11 @@
             if (music.paused) {
                 music.play();
                 musicBtn.innerText = "♫";
-                musicBtn.classList.add('rotating'); // Berputar lagi saat play
+                musicBtn.classList.add('rotating');
             } else {
                 music.pause();
                 musicBtn.innerText = "🔇";
-                musicBtn.classList.remove('rotating'); // Berhenti berputar saat pause
+                musicBtn.classList.remove('rotating');
             }
         }
 
